@@ -1,0 +1,52 @@
+.advantages {
+  padding-top: 94px;
+}
+
+.advantages-list {
+  display: flex;
+  gap: 30px;
+}
+
+.advantages-list__item {
+  width: calc((100% - 3 * 30px) / 4);
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--bg-color-icon-box);
+  border-radius: 4px;
+}
+
+.advantages-list__icon {
+  width: 70px;
+  height: 70px;
+}
+
+/* .advantages-list__item::before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-bottom: 30px;
+    background-image: url(../images/advantages-astronaut.svg);
+    background-size: 70 px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bg-color-btn-filter);
+  } */
+
+.advantages-list__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advantages-list__text {
+  line-height: 1.71;
+  color: var(--secondary-color);
+}

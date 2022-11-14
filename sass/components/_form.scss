@@ -1,0 +1,113 @@
+.modal__text {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: #212121;
+}
+
+.form__field {
+  margin-bottom: 10px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.67;
+  letter-spacing: 0.01em;
+  color: var(--secondary-color);
+}
+
+.form__wrapper {
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  outline: none;
+  transition: border var(--transition-duration) var(--transition-timing-function);
+
+  .form__wrapper:focus-within > & {
+    border: 1px solid var(--accent-color);
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+
+  .form__wrapper:focus-within > & {
+    fill: var(--accent-color);
+  }
+}
+
+.form__input.comment {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+.form__label-check {
+  position: relative;
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 12px;
+  line-height: 1.71;
+  color: var(--secondary-color);
+
+  & > a {
+    color: var(--accent-color);
+  }
+}
+
+.form__input-check {
+  /* -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute; */
+
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.form__icon-check {
+  border: 2px solid var(--brand-color);
+  border-radius: 2px;
+  background-color: transparent;
+  transition: background-color var(--transition-duration) var(--transition-timing-function), border-color var(--transition-duration) var(--transition-timing-function);
+
+  .form__input-check:checked ~ & {
+    background-color: var(--accent-color);
+    border-color: transparent;
+  }
+
+  .form__input-check:focus ~ & {
+    border-color: var(--accent-color);
+  }
+}
+
+.form__btn {
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
