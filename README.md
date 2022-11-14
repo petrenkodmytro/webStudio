@@ -1,3 +1,3 @@
-# goit-markup-hw-07
-BEM methodology (Block, Element, Modifier).
-Studying preprocessory SASS.
+# goit-markup-hw-08
+Responsive and adaptive.
+Mobile First.
