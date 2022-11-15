@@ -2,24 +2,30 @@
   padding: 94px 0;
 }
 
-.clients__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+}
+
+.clients-list__item {
+  width:  calc((100% - 2 * 30px) / 2);
+
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
 }
 
 .clients-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
