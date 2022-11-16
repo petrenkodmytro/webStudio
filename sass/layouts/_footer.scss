@@ -5,7 +5,27 @@
 
 .page-footer {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1200px) {
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0px;
+  }
+}
+
+.contact-box {
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
 
 .footer__logo {
@@ -43,7 +63,12 @@
 /* ----------join---------- */
 
 .join {
-  margin-left: 70px;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    text-align: left;
+  }
 }
 
 .join__text,
@@ -64,21 +89,43 @@
 /* ----------subscribe---------- */
 
 .subscribe {
-  margin-left: auto;
+  text-align: center;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    text-align: left;
+  }
 }
 
 .subscribe__form {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+  }
 }
 
 .subscribe__input {
-  min-width: 358px;
+  min-width: 450px;
   padding: 16px 12px;
   background-color: inherit;
   color: var(--footer-contact-item);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+  }
 }
 /* .input-subscribe:not(:placeholder-shown) {
   border: 1px solid var(--accent-color);

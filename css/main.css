@@ -865,9 +865,37 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 60px;
+}
+@media screen and (min-width: 768px) {
+  .page-footer {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-footer {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 0px;
+  }
+}
+
+.contact-box {
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .contact-box {
+    text-align: left;
+  }
 }
 
 .footer__logo {
@@ -901,7 +929,13 @@ button {
 
 /* ----------join---------- */
 .join {
-  margin-left: 70px;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .join {
+    margin-left: 70px;
+    text-align: left;
+  }
 }
 
 .join__text,
@@ -921,23 +955,62 @@ button {
 
 /* ----------subscribe---------- */
 .subscribe {
-  margin-left: auto;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe {
+    margin-left: auto;
+    text-align: left;
+  }
 }
 
 .subscribe__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 12px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .subscribe__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 12px;
+  }
 }
 
 .subscribe__input {
-  min-width: 358px;
+  min-width: 450px;
   padding: 16px 12px;
   background-color: inherit;
   color: var(--footer-contact-item);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .subscribe__input {
+    min-width: 358px;
+  }
 }
 
 /* .input-subscribe:not(:placeholder-shown) {
