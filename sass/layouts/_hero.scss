@@ -1,25 +1,44 @@
 .hero {
   max-width: 1600px;
-  height: 600px;
+  min-height: 400px;
   padding: 200px 0;
   margin: 0 auto;
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tab.jpg);
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
+  }
 }
 
 .hero__title {
-  width: 696px;
+  min-width: 290px;
   margin: auto;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-bg-color);
+
+  @media screen and (min-width: 360px) {
+    max-width: 360px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__btn {
