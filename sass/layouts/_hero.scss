@@ -1,48 +1,59 @@
 .hero {
-  max-width: 1600px;
-  min-height: 400px;
-  padding: 200px 0;
-  margin: 0 auto;
-  text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+	max-width: 1600px;
+	min-height: 400px;
+	padding: 200px 0;
+	margin: 0 auto;
+	text-align: center;
+	background-image: var(--gradient), url(../images/hero-bg-mob.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 
-  @media screen and (min-width: 768px) {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tab.jpg);
-  }
+	// mixin
+	@include retina {
+		background-image: var(--gradient), url(../images/hero-bg-mob-2x.jpg);
+	}
 
-  @media screen and (min-width: 1200px) {
-    min-height: 600px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
-  }
+	@media screen and (min-width: 768px) {
+		background-image: var(--gradient), url(../images/hero-bg-tab.jpg);
+		@include retina {
+			background-image: var(--gradient), url(../images/hero-bg-tab-2x.jpg);
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		min-height: 600px;
+		background-image: var(--gradient), url(../images/hero-bg.jpg);
+		@include retina {
+			background-image: var(--gradient)), url(../images/hero-bg-2x.jpg);
+		}
+	}
 }
 
 .hero__title {
-  min-width: 290px;
-  margin: auto;
-  font-weight: 900;
-  font-size: 26px;
-  line-height: 1.61;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--secondary-bg-color);
+	min-width: 290px;
+	margin: auto;
+	font-weight: 900;
+	font-size: 26px;
+	line-height: 1.61;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--secondary-bg-color);
 
-  @media screen and (min-width: 360px) {
-    max-width: 360px;
-  }
+	@media screen and (min-width: 360px) {
+		max-width: 360px;
+	}
 
-  @media screen and (min-width: 1200px) {
-    max-width: 696px;
-    font-size: 44px;
-    line-height: 1.36;
-  }
+	@media screen and (min-width: 1200px) {
+		max-width: 696px;
+		font-size: 44px;
+		line-height: 1.36;
+	}
 }
 
 .hero__btn {
-  min-width: 216px;
-  margin: 30px auto 0;
-  padding: 10px 32px;
+	min-width: 216px;
+	margin: 30px auto 0;
+	padding: 10px 32px;
 }
