@@ -42,6 +42,11 @@ button {
   list-style-type: none;
 }
 
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 :root {
   --brand-color: #212121;
   --secondary-color: #757575;
@@ -233,7 +238,7 @@ button {
   transition: transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 470px) {
   .modal {
     width: 320px;
   }
