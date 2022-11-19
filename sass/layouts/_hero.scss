@@ -25,7 +25,7 @@
 		min-height: 600px;
 		background-image: var(--gradient), url(../images/hero-bg.jpg);
 		@include retina {
-			background-image: var(--gradient)), url(../images/hero-bg-2x.jpg);
+			background-image: var(--gradient), url(../images/hero-bg-2x.jpg);
 		}
 	}
 }

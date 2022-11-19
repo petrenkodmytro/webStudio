@@ -146,9 +146,15 @@ button {
   display: block;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .social-list {
@@ -216,7 +222,7 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  width: 528px;
+  width: 450px;
   padding: 40px;
   background: var(--secondary-bg-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -226,6 +232,11 @@ button {
   transition: -webkit-transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
 }
 
 .btn-close {
@@ -312,14 +323,22 @@ button {
   display: -ms-flexbox;
   display: flex;
   gap: 7px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  padding-left: 12px;
   line-height: 1.71;
   color: var(--secondary-color);
+}
+@media screen and (max-width: 1200px) {
+  .form__label-check {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 .form__label-check > a {
   color: var(--accent-color);
@@ -383,11 +402,6 @@ button {
   color: var(--color-logo);
 }
 
-.nav-list__item:not(:last-child),
-.contact__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .nav,
 .nav-list,
 .contact {
@@ -400,8 +414,49 @@ button {
           align-items: center;
 }
 
+.nav-list,
+.contact {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .nav-list,
+.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 50px;
+  }
+}
+
 .contact {
   margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .nav-list__link,
@@ -413,6 +468,10 @@ button {
   color: var(--brand-color);
   -webkit-transition: color var(--transition-duration) var(--transition-timing-function);
   transition: color var(--transition-duration) var(--transition-timing-function);
+}
+
+.contact__link {
+  padding: 0;
 }
 
 .nav-list__link:hover,
@@ -490,8 +549,7 @@ button {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg-2x.jpg);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-2x.jpg);
+    background-image: var(--gradient), url(../images/hero-bg-2x.jpg);
   }
 }
 

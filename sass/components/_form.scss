@@ -60,12 +60,17 @@
   position: relative;
   display: flex;
   gap: 7px;
+  justify-content: center;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 30px;
-  padding-left: 12px;
   line-height: 1.71;
   color: var(--secondary-color);
+
+  @media screen and (max-width: 1200px) {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 
   & > a {
     color: var(--accent-color);
