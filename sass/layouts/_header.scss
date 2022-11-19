@@ -5,6 +5,8 @@
 
 .page-header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 80px;
 }
 
@@ -14,11 +16,6 @@
     color: var(--color-logo);
   }
 }
-
-// .nav-list__item:not(:last-child),
-// .contact__item:not(:last-child) {
-//   margin-right: 50px;
-// }
 
 .nav,
 .nav-list,
@@ -95,6 +92,117 @@
   }
 }
 
+.menu-open {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-open__icon,
+.menu-close__icon {
+  transition: fill var(--transition-duration) var(--transition-timing-function);
+
+  .menu-open:hover &,
+  .menu-open:focus &,
+  .menu-close:hover &,
+  .menu-close:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  overflow: scroll;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: #fff;
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.mob-nav-list,
+.mob-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.mob-contact {
+  margin-top: auto;
+}
+
+.mob-nav-list__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--brand-color);
+}
+
+.mob-nav-list__link--current {
+  position: relative;
+  color: var(--accent-color);
+}
+
+.mob-contact__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+
+  @media screen and (max-width: 400px) {
+    font-size: 24px;
+  }
+}
+
+.mob-contact__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--secondary-color);
+}
+
+.mob-social-list {
+  display: flex;
+  margin-top: 64px;
+  @media screen and (max-width: 400px) {
+    flex-wrap: wrap;
+  }
+}
+
+.mob-social-list__item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-social-list__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
 .current {
   position: relative;
   color: var(--accent-color);
