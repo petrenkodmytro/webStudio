@@ -112,7 +112,12 @@
             <li class="item">
               <a class="cads-list-link link" href="#">
                 <div class="cads-thumb">
-                  <img src="./images/portfolio/technocryck.jpg" width="370" alt="відкритий ноутбук, на екрані зображені фото картки" />
+                  <picture>
+                    <source srcset="./images/portfolio/technocryck.jpg 1x, ./images/portfolio/technocryck-2x.jpg 2x" media="(min-width: 1200px)" />
+                    <source srcset="./images/portfolio/technocryck-tab.jpg 1x, ./images/portfolio/technocryck-tab-2x.jpg 2x" media="(min-width: 768px)" />
+                    <source srcset="./images/portfolio/technocryck-mob.jpg 1x, ./images/portfolio/technocryck-mob-2x.jpg 2x" media="(min-width: 320px)" />
+                    <img src="./images/portfolio/technocryck-mob.jpg" width="450" alt="відкритий ноутбук, на екрані зображені фото картки" />
+                  </picture>
                   <div class="overley">
                     <p class="overley-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
