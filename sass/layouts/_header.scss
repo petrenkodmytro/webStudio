@@ -105,7 +105,7 @@
 
 .menu-open__icon,
 .menu-close__icon {
-  transition: fill var(--transition-duration) var(--transition-timing-function);
+    transition: fill var(--transition-duration) var(--transition-timing-function);
 
   .menu-open:hover &,
   .menu-open:focus &,
@@ -180,13 +180,18 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
+
+  @media screen and (max-width: 340px) {
+    font-size: 20px;
+  }
 }
 
 .mob-social-list {
   display: flex;
   margin-top: 64px;
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     flex-wrap: wrap;
+    gap: 10px;
   }
 }
 

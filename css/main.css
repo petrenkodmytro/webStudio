@@ -618,6 +618,11 @@ button {
   letter-spacing: 0.02em;
   color: var(--secondary-color);
 }
+@media screen and (max-width: 340px) {
+  .mob-contact__mail {
+    font-size: 20px;
+  }
+}
 
 .mob-social-list {
   display: -webkit-box;
@@ -625,10 +630,11 @@ button {
   display: flex;
   margin-top: 64px;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .mob-social-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    gap: 10px;
   }
 }
 
@@ -995,7 +1001,7 @@ button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .filter-list {
@@ -1005,6 +1011,12 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
   }
 }
 
