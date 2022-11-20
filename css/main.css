@@ -225,6 +225,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  overflow-y: scroll;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   width: 450px;
@@ -238,9 +239,10 @@ button {
   transition: transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
 }
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 450px) {
   .modal {
     width: 320px;
+    position: relative;
   }
 }
 @media screen and (min-width: 1200px) {
