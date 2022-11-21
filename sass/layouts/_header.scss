@@ -7,7 +7,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
 }
 
 .header__logo {
@@ -93,8 +97,7 @@
 }
 
 .menu-open {
-  width: 40px;
-  height: 40px;
+   padding: 0;
   background-color: transparent;
   border: none;
 
@@ -132,8 +135,7 @@
   position: absolute;
   top: 10px;
   right: 15px;
-  width: 40px;
-  height: 40px;
+  padding: 0;
   background-color: transparent;
   border: none;
 }
@@ -191,7 +193,7 @@
   margin-top: 64px;
   @media screen and (max-width: 420px) {
     flex-wrap: wrap;
-    gap: 10px;
+    row-gap: 10px;
   }
 }
 

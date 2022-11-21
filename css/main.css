@@ -225,7 +225,6 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  overflow-y: scroll;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
   width: 450px;
@@ -410,7 +409,12 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 80px;
+  height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .page-header {
+    height: 80px;
+  }
 }
 
 .header__logo {
@@ -519,8 +523,7 @@ button {
 }
 
 .menu-open {
-  width: 40px;
-  height: 40px;
+  padding: 0;
   background-color: transparent;
   border: none;
 }
@@ -565,8 +568,7 @@ button {
   position: absolute;
   top: 10px;
   right: 15px;
-  width: 40px;
-  height: 40px;
+  padding: 0;
   background-color: transparent;
   border: none;
 }
@@ -636,7 +638,7 @@ button {
   .mob-social-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    gap: 10px;
+    row-gap: 10px;
   }
 }
 
@@ -671,8 +673,8 @@ button {
 
 .hero {
   max-width: 1600px;
-  min-height: 400px;
-  padding: 200px 0;
+  height: 400px;
+  padding: 118px 0;
   margin: 0 auto;
   text-align: center;
   background-image: var(--gradient), url(../images/hero-bg-mob.jpg);
@@ -697,6 +699,7 @@ button {
 }
 @media screen and (min-width: 1200px) {
   .hero {
+    padding: 200px 0;
     min-height: 600px;
     background-image: var(--gradient), url(../images/hero-bg.jpg);
   }
@@ -931,7 +934,12 @@ button {
 }
 
 .clients {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding: 94px 0;
+  }
 }
 
 .clients-list {
@@ -1130,8 +1138,8 @@ button {
   height: 100%;
   padding: 63px 24px;
   background: rgba(33, 150, 243, 0.9);
-  -webkit-transform: translatey(100%);
-          transform: translatey(100%);
+  -webkit-transform: translatey(101%);
+          transform: translatey(101%);
   -webkit-transition: -webkit-transform var(--transition-duration) var(--transition-timing-function);
   transition: -webkit-transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function);
@@ -1168,13 +1176,13 @@ button {
   .page-footer {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 @media screen and (min-width: 1200px) {
   .page-footer {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     gap: 0px;
