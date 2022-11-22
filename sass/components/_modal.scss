@@ -7,6 +7,10 @@
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   transition: opacity var(--transition-duration) var(--transition-timing-function);
+
+  @media screen and (max-height: 660px) {
+    overflow-y: scroll;
+  }
 }
 
 .backdrop.is-hidden {
@@ -25,7 +29,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-
   width: 450px;
   padding: 40px;
 
@@ -37,11 +40,16 @@
 
   @media screen and (max-width: 450px) {
     width: 320px;
-    position: relative;
   }
 
   @media screen and (min-width: 1200px) {
     width: 528px;
+  }
+
+  @media screen and (max-height: 660px) {
+    position: static;
+    transform: translate(0, 0);
+    margin: 0 auto;
   }
 }
 
