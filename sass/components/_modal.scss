@@ -38,19 +38,25 @@
 
   transition: transform var(--transition-duration) var(--transition-timing-function);
 
-  @media screen and (max-width: 450px) {
-    width: 320px;
+  @media screen and (max-width: 1199px) {
+    height: 100%;
+    width: 95%;
+    max-height: 609px;
+    max-width: 450px;
+    overflow: scroll;
   }
-
-  @media screen and (min-width: 1200px) {
-    width: 528px;
-  }
-
-  @media screen and (max-height: 660px) {
-    position: static;
-    transform: translate(0, 0);
-    margin: 0 auto;
-  }
+  // для скрола модалки на маленьком экране
+  // @media screen and (max-width: 450px) {
+  //   width: 320px;
+  // }
+  // @media screen and (min-width: 1200px) {
+  //   width: 528px;
+  // }
+  // @media screen and (max-height: 660px) {
+  //   position: static;
+  //   transform: translate(0, 0);
+  //   margin: 0 auto;
+  // }
 }
 
 .btn-close {

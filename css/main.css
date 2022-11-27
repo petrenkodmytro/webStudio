@@ -243,22 +243,13 @@ button {
   transition: transform var(--transition-duration) var(--transition-timing-function);
   transition: transform var(--transition-duration) var(--transition-timing-function), -webkit-transform var(--transition-duration) var(--transition-timing-function);
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1199px) {
   .modal {
-    width: 320px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal {
-    width: 528px;
-  }
-}
-@media screen and (max-height: 660px) {
-  .modal {
-    position: static;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    margin: 0 auto;
+    height: 100%;
+    width: 95%;
+    max-height: 609px;
+    max-width: 450px;
+    overflow: scroll;
   }
 }
 
